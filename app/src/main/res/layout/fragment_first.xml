@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+        name="viewModel"
+        type="com.flores.parcial.MainViewModel"/>
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment"
+    android:orientation="vertical"
+    android:padding="@dimen/default_gap">
+
+    <EditText
+        android:id="@+id/score_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={viewModel.score1}"
+        android:hint="@string/agregar_puntaje"/>
+
+    <!-- Se agrega la referencia de quien modifica el viewmodel -->
+
+    <Button
+        android:id="@+id/action_addscore"
+        android:layout_marginTop="@dimen/default_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anadir_puntaje"
+        android:layout_gravity="end"/>
+
+
+
+</LinearLayout>
+</layout>
